@@ -4,8 +4,159 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>개인포트폴리오</title>
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/jquery-ui@1.14.0/themes/base/theme.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+
+  <!-- JS -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+  <script defer src="JS/main.js"></script>
 </head>
 <body>
-
+  <div class="wrap">
+    <header>
+      <h1><a href="index.html"><i class="ri-home-3-line"></i></a></h1>
+      <ul>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Skils</a></li>
+        <li><a href="#">PortFolio</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </header>
+    <main>
+      <section class="main_visual">
+        <div class="main_wrap">
+          <div class="main_h2">
+            <h2 class="t1">Web Publisher</h2>
+            <h2 class="t2">PortFolio</h2>
+          </div>
+        </div>
+      </section>
+      <section class="about">
+        <div class="about_wrap">
+          <img src="#" alt="사진">
+          <div class="about_txt">
+            <p>이용자들의 편리성을 최우선으로 고려한 웹사이트를 개발해 나가는 것을 <br> 목표를 가진 신입 웹 퍼블리셔 채혜윤입니다.</p>
+            <div class="p_wrap">
+              <div class="p_info">
+                <span>Name : 채혜윤</span>
+                <span>Age : 23</span>
+                <span>Tel : 010-7656-5303</span>
+                <address>서울시 구로구 항동로72</address>
+              </div>
+              <div class="p_license">
+                <span>자격증</span>
+                <p>전산응용건축제도기능사 <span>2018.12.28 취득</span></p>
+                <p>실내건축기능사 <span>2019.07.19 취득</span></p>
+              </div>
+            </div>
+            <div class="p_career">
+              <span>경력사항</span>
+              <p>2019.10 ~ 2023.06 : (주)아크건축사사무소 근무</p>
+              <p>2024.05 ~ 2024.11 : MBC컴퓨터학원 UI&UX 과정 수료</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="skils">
+        <ul class="skils_wrap">
+          <li id="html">
+            <div class="card">
+              <div class="front">HTML</div>
+              <div class="back">우왕</div>
+            </div>
+          </li>
+          <li id="css">
+            <div class="card">
+              <div class="front">CSS</div>
+              <div class="back"></div>
+            </div>
+          </li>
+          <li id="jQuery">
+            <div class="card">
+              <div class="front">jQuery</div>
+              <div class="back"></div>
+            </div>
+          </li>
+          <li id="js">
+            <div class="card">
+              <div class="front">Java Script</div>
+              <div class="back"></div>
+            </div>
+          </li>
+          <li id="fm">
+            <div class="card">
+              <div class="front">
+                <span class="c1">F</span>
+                <span class="c2">i</span>
+                <span class="c3">g</span>
+                <span class="c4">m</span>
+                <span class="c5">a</span>
+              </div>
+              <div class="back"></div>
+            </div>
+          </li>
+          <li id="psd">
+            <div class="card">
+              <div class="front">Adobe PSD</div>
+              <div class="back"></div>
+            </div>
+          </li>
+          <li id="ai">
+            <div class="card">
+              <div class="front">Adobe AI</div>
+              <div class="back"></div>
+            </div>
+          </li>
+        </ul>
+      </section>
+      <section class="port">
+        <div class="port_wrap">
+          <div class="port_left">
+            <h2>My Projects</h2>
+              <p>자이 C&A</p>
+              <p>Posco A&C</p>
+          </div>
+          <div class="port_right">
+            <ul>
+              <li class="xi">
+                <a href="#"><img src="/image/scrolltrigger/xiC&A.png" alt="자이C&A"></a>
+              </li>
+              <li class="posco">
+                <a href="#"><img src="/image/scrolltrigger/posco.png" alt="Posco"></a>
+              </li>
+              <li class="xi">
+                <a href="#"><img src="/image/scrolltrigger/xiC&A.png" alt="자이C&A"></a>
+              </li>
+              <li class="posco">
+                <a href="#"><img src="/image/scrolltrigger/posco.png" alt="Posco"></a>
+              </li>
+              <li class="xi">
+                <a href="#"><img src="/image/scrolltrigger/xiC&A.png" alt="자이C&A"></a>
+              </li>
+              <li class="posco">
+                <a href="#"><img src="/image/scrolltrigger/posco.png" alt="Posco"></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="f_wrap">
+        <strong>CONTACT ME</strong>
+        <div class="f_adress">
+            <span class="mail"><i class="ri-mail-send-line"></i> coco5303@naver.com</span>
+          <a href="https://open.kakao.com/o/s4ZPOOUg"><i class="ri-kakao-talk-fill"></i> Open Chat</a>
+        </div>
+      </div>
+    </footer>
+  </div>
 </body>
 </html>

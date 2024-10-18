@@ -1,0 +1,121 @@
+/* font */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+@import url(https://cdnjs.cloudflare.com/ajax/libs/pretendard/1.3.9/static/pretendard.css);
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+
+
+/* body */
+:root {--main-color: #E8E3C3}
+body {background:var(--main-color);cursor: pointer;}
+
+/* header */
+header {position: absolute;left: 0;right: 0; margin: 30px 80px;display: flex;justify-content: space-between;font-family: "Playfair Display", serif;}
+header i {font-size: 40px;}
+header ul {display: flex;gap: 50px;}
+header ul li {font-size: 25px;font-weight: 700;}
+
+
+/* main */
+.main_visual {position: relative;height: 100vh;display: flex;justify-content: center;}
+.main_visual .main_wrap {display: flex;flex-direction: column;justify-content: center;align-items: center;}
+.main_visual .main_h2 {margin-bottom: 200px;}
+.main_visual h2 {
+  text-align: center;
+  font-size: 80px;font-weight: 700;font-family: "Playfair Display", serif;
+}
+
+.about {height: 100%;margin: 0 80px;border-top: 1px solid #000;font-family: "Noto Sans KR", sans-serif;height: auto;}
+.about .about_wrap {display: flex;gap: 50px;padding: 100px;}
+.about .about_wrap img {background: #613E3E;width: 300px;height: 341px;margin-left: 300px;}
+.about .about_txt {display: flex;flex-direction: column;gap: 40px;font-size: 20px;}
+.about .about_txt p {font-weight: bold;}
+.about .p_wrap {display: flex;gap: 100px;}
+.about .p_info {display: flex;flex-direction: column;}
+.about .p_license {display: flex;flex-direction: column;}
+.about .p_license p>span {font-weight: normal;font-size: 15px;}
+
+.skils {margin: 0 80px;border-top: 1px solid #000;}
+.skils .skils_wrap {display: flex;justify-content: center;align-items: center;font-size: 26px;font-weight: 700;height: 100vh;gap: 10px;perspective: 1000px;}
+.skils .skils_wrap li {
+  display: flex;justify-content: center;align-items: center;
+  width: 300px;height: 300px;border-radius: 10px;
+  transform-style: preserve-3d; /* 3D 효과를 위해 필요 */
+  transition: transform 0.6s; /* 회전 애니메이션 */
+}
+#html {background: #f56735; color: #FFF;}
+#css {background: #23aadb;color: #FFF;}
+#jQuery {background: #fff;color: #3065b3;}
+#js {background: #f4bf3b; color: #fff;}
+#fm {background: #1e1e1e;}
+#fm .c1 {color: #f24e1e;}
+#fm .c2 {color: #ff7262;}
+#fm .c3 {color: #a259ff;}
+#fm .c4 {color: #1abcfe;}
+#fm .c5 {color: #0acf83;}
+#ai {background: #ff9b00;}
+#psd {background: #001e36;color: #31a8ff;}
+
+.skils .skils_wrap li:hover {
+  transform: rotateY(180deg);
+}
+
+/* 카드 앞면과 뒷면 설정 */
+.card {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  transform-style: preserve-3d; /* 카드 자체가 3D 공간에서 회전하도록 설정 */
+  backface-visibility: hidden; /* 카드가 회전할 때 뒤가 보이지 않도록 */
+}
+
+/* 카드의 앞면: 기본적으로 앞면만 보이도록 설정 */
+.front {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: inherit; /* li의 배경색 상속 */
+  color: inherit; /* 텍스트 색상 상속 */
+  backface-visibility: hidden; /* 앞면이 회전할 때 뒤쪽이 보이지 않게 */
+}
+
+/* 카드의 뒷면: 기본적으로 숨겨져 있다가 180도 회전할 때 나타남 */
+.back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #333;
+  color: #fff;
+  transform: rotateY(180deg); /* 뒷면을 미리 180도 회전 */
+  backface-visibility: hidden; /* 회전하기 전에는 보이지 않게 설정 */
+  border-radius: 10px;
+}
+
+
+.port {margin: 0 80px;border-top: 1px solid #000;}
+.port .port_wrap {display: flex;margin-top: 100px;}
+/* .port .port_wrap>* {width: 50%;} */
+.port .port_left {display: flex;flex-direction: column;align-items: flex-start;height: 100vh;padding: 200px 0 0 200px;width: 40%;}
+.port .port_left h2 {font-size: 60px;font-weight: 900;margin-bottom: 20px;}
+.port .port_left p {padding: 10px;font-size: 18px;font-weight: bold;font-family:'Pretendard';color: #565e65;}
+.port .port_right {display: flex;flex-direction: column;width: 60%;}
+.port .port_right ul {display: flex;gap: 30px;padding: 30px;flex-wrap: wrap;}
+.port .port_right li {display: flex;justify-content: center;align-items: center;width: calc(50% - 15px);height: 500px;}
+.port .port_right li:nth-child(2n) {transform: translateY(200px);}
+
+/* footer */
+footer {margin: 80px;border-top: 1px solid #000;}
+.f_wrap {display: flex;flex-direction: column;align-items: center;margin-top: 100px;}
+.f_wrap strong {font-size: 80px;font-weight: 700;margin-bottom: 100px;}
+.f_wrap .f_adress {display: flex;justify-content: center;gap: 500px;font-size: 25px;width: 100%;font-weight: 600;}
