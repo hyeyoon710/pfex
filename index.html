@@ -21,12 +21,13 @@
 <body>
   <div class="wrap">
     <header>
-      <h1><a href="index.html"><i class="ri-home-3-line"></i></a></h1>
+      <div class="cursor"></div>
+      <h1 ><a href="index.html" class="home"><i class="ri-home-3-line"></i></a></h1>
       <ul>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Skils</a></li>
-        <li><a href="#">PortFolio</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="about">About</a></li>
+        <li><a href="skils">Skils</a></li>
+        <li><a href="portfolio">PortFolio</a></li>
+        <li><a href="contact">Contact</a></li>
       </ul>
     </header>
     <main>
@@ -38,18 +39,20 @@
           </div>
         </div>
       </section>
-      <section class="about">
+      <section id="about" class="about">
         <div class="about_wrap">
-          <img src="#" alt="사진">
+          <div class="about_left">
+              <img src="#" alt="사진">
+              <div class="p_info">
+                <span>Name : 채혜윤</span>
+                <span>Birth : 2002-02-07</span>
+                <span>Tel : 010-7656-5303</span>
+                <address>서울시 구로구 항동로72 하버라인 401동 506호</address>
+              </div>
+          </div>
           <div class="about_txt">
             <p>이용자들의 편리성을 최우선으로 고려한 웹사이트를 개발해 나가는 것을 <br> 목표를 가진 신입 웹 퍼블리셔 채혜윤입니다.</p>
             <div class="p_wrap">
-              <div class="p_info">
-                <span>Name : 채혜윤</span>
-                <span>Age : 23</span>
-                <span>Tel : 010-7656-5303</span>
-                <address>서울시 구로구 항동로72</address>
-              </div>
               <div class="p_license">
                 <span>자격증</span>
                 <p>전산응용건축제도기능사 <span>2018.12.28 취득</span></p>
@@ -64,30 +67,30 @@
           </div>
         </div>
       </section>
-      <section class="skils">
+      <section id="skils" class="skils">
         <ul class="skils_wrap">
           <li id="html">
             <div class="card">
               <div class="front">HTML</div>
-              <div class="back">우왕</div>
+              <div class="back">웹 접근성과 웹표준을 <br>고려하여 마크업 구조를 <br>작성합니다.</div>
             </div>
           </li>
           <li id="css">
             <div class="card">
               <div class="front">CSS</div>
-              <div class="back"></div>
+              <div class="back">구조적 선택자를 활용하여 클래스와 아이디를 마크업 하여 웹을 제작합니다.</div>
             </div>
           </li>
           <li id="jQuery">
             <div class="card">
               <div class="front">jQuery</div>
-              <div class="back"></div>
+              <div class="back">HTML, CSS를 활용해 jQuery로 사용자 이벤트에 필요한 기능을 간단히 <br>구현합니다.</div>
             </div>
           </li>
           <li id="js">
             <div class="card">
               <div class="front">Java Script</div>
-              <div class="back"></div>
+              <div class="back">function의 응용을 통해<br>코딩의 핵심 구조를 익히고, 웹페이지 동작에 필요한<br>스크립트를 작성할 수 <br> 있습니다.</div>
             </div>
           </li>
           <li id="fm">
@@ -99,49 +102,57 @@
                 <span class="c4">m</span>
                 <span class="c5">a</span>
               </div>
-              <div class="back"></div>
+              <div class="back">autolayout, Component를 활용하여 효율적으로 디자인 할 수 있습니다.</div>
             </div>
           </li>
           <li id="psd">
             <div class="card">
               <div class="front">Adobe PSD</div>
-              <div class="back"></div>
+              <div class="back">사진 보정 및 편집 등의 <br> 디자인 작업을 진행합니다.</div>
             </div>
           </li>
           <li id="ai">
             <div class="card">
               <div class="front">Adobe AI</div>
-              <div class="back"></div>
+              <div class="back">아이콘, 벡터이미지와 같은 작업을 진행합니다.</div>
             </div>
           </li>
         </ul>
       </section>
-      <section class="port">
+      <section id="rest" class="rest">
+        <div class="front"></div>
+        <img src="/image/rest.jpg" alt="">
+      </section>
+      <section id="portfolio" class="port">
         <div class="port_wrap">
           <div class="port_left">
             <h2>My Projects</h2>
-              <p>자이 C&A</p>
+              <p>Kaist</p>
               <p>Posco A&C</p>
+              <p>자이 C&A</p>
           </div>
           <div class="port_right">
             <ul>
-              <li class="xi">
-                <a href="#"><img src="/image/scrolltrigger/xiC&A.png" alt="자이C&A"></a>
+              <li class="kaist">
+                <a href="#"><img src="/image/scrolltrigger/Kaist.jpg" alt="kaist"></a>
+                <div class="p_txt">
+                  <strong>Kaist</strong>
+                  <p>녹색성장가능지속대학원 공식 홈페이지를 클론 코딩하였습니다.</p>
+                </div>
               </li>
               <li class="posco">
-                <a href="#"><img src="/image/scrolltrigger/posco.png" alt="Posco"></a>
+                <a href="#"><img src="/image/scrolltrigger/main_visual_2.jpg" alt="Posco"></a>
+                <div class="p_txt">
+                  <strong>Posco</strong>
+                  <p>PoscoA&C 공식 홈페이지를 리뉴얼 후 클론 코딩하였습니다.</p>
+                </div>
               </li>
               <li class="xi">
-                <a href="#"><img src="/image/scrolltrigger/xiC&A.png" alt="자이C&A"></a>
-              </li>
-              <li class="posco">
-                <a href="#"><img src="/image/scrolltrigger/posco.png" alt="Posco"></a>
-              </li>
-              <li class="xi">
-                <a href="#"><img src="/image/scrolltrigger/xiC&A.png" alt="자이C&A"></a>
-              </li>
-              <li class="posco">
-                <a href="#"><img src="/image/scrolltrigger/posco.png" alt="Posco"></a>
+                <a href="#"><img src="/image/scrolltrigger/xiC&A.jpg" alt="자이C&A"></a>
+                <div class="p_txt">
+                  <strong>자이C&A</strong>
+                  <p>자이C&A 공식 홈페이지를 클론코딩하였습니다.</p>
+                </div>
               </li>
             </ul>
           </div>
@@ -149,13 +160,13 @@
       </section>
     </main>
     <footer>
-      <div class="f_wrap">
+      <section id="contact" class="f_wrap">
         <strong>CONTACT ME</strong>
         <div class="f_adress">
             <span class="mail"><i class="ri-mail-send-line"></i> coco5303@naver.com</span>
           <a href="https://open.kakao.com/o/s4ZPOOUg"><i class="ri-kakao-talk-fill"></i> Open Chat</a>
         </div>
-      </div>
+      </section>
     </footer>
   </div>
 </body>
