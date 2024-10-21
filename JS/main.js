@@ -56,7 +56,7 @@ window.addEventListener('load', () => {
       end: 'bottom top',
       pin: true,
       scrub: true,
-      markers: true,
+      // markers: true,
     }
   });
 
