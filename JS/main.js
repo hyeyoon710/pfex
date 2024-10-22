@@ -63,49 +63,6 @@ window.addEventListener('load', () => {
   ani1.play();
 })
 
-//Port color
-document.addEventListener('DOMContentLoaded', function () {
-  // Intersection Observer 설정
-  const options = {
-    root: null, // viewport를 기준으로
-    rootMargin: '0px 0px -100% 0px', // 화면 아래쪽 끝이 상단에 닿을 때 실행
-    threshold: 0 // 요소가 상단에 딱 맞춰졌을 때 실행
-  };
-
-  const observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        // Kaist li가 화면 상단에 도달했을 때
-        if (entry.target.classList.contains('kaist')) {
-          document.querySelector('.port_left p:nth-child(2)').style.color = '#005dab';
-        }
-        // Posco li가 화면 상단에 도달했을 때
-        else if (entry.target.classList.contains('posco')) {
-          document.querySelector('.port_left p:nth-child(3)').style.color = '#006b8d';
-        }
-        // Xi li가 화면 상단에 도달했을 때
-        else if (entry.target.classList.contains('xi')) {
-          document.querySelector('.port_left p:nth-child(4)').style.color = '#00588a';
-        }
-      } else {
-        // 화면에서 벗어났을 때는 검은색으로 복구
-        if (entry.target.classList.contains('kaist')) {
-          document.querySelector('.port_left p:nth-child(2)').style.color = 'black';
-        } else if (entry.target.classList.contains('posco')) {
-          document.querySelector('.port_left p:nth-child(3)').style.color = 'black';
-        } else if (entry.target.classList.contains('xi')) {
-          document.querySelector('.port_left p:nth-child(4)').style.color = 'black';
-        }
-      }
-    });
-  }, options);
-
-  // 모든 li 요소를 관찰
-  const targets = document.querySelectorAll('.port_right li');
-  targets.forEach(target => observer.observe(target));
-});
-
-
 
 
 
