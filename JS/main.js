@@ -16,7 +16,7 @@ $(window).on('scroll', function(e) {
     $('header').addClass('fixed')
   } else {
     $('header').removeClass('fixed')
-    $('header li a').css('background', 'none')
+    // $('header li a').css('background', 'none')
   }
 })
 
@@ -29,12 +29,15 @@ $('header a').click(function(e) {
     return; // 아래 섹션 이동 코드는 실행하지 않음
   }
 
+  let $this = $(this); // 클릭한 요소를 변수에 저장
+  $this.css('background', '#E8E3C3');
+
+  $('header li a').not($this).css('background', 'none');
+
   let n = $(this).parent().index(); // 클릭한 a 태그의 부모 li의 인덱스를 가져옴
-  $('html').animate({
-    scrollTop : $('section').eq(n + 1).offset().top
-  })
-  $(this).css('background', '#E8E3C3')
-  $('header li a').not(this).css('background', 'none')
+  $('html, body').animate({
+    scrollTop: $('section').eq(n + 1).offset().top
+  }, 500);
 })
 
 // ScrollTrigger
