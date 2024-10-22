@@ -14,9 +14,10 @@ function cursor(e) {
 $(window).on('scroll', function(e) {
   if ($(window).scrollTop() > 110) { // 스크롤이 100px 이상 내려가면
     $('header').addClass('fixed')
+
   } else {
     $('header').removeClass('fixed')
-    // $('header li a').css('background', 'none')
+    $('header li a').css('background', 'none')
   }
 })
 
