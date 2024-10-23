@@ -3,6 +3,12 @@
 @import url(https://cdnjs.cloudflare.com/ajax/libs/pretendard/1.3.9/static/pretendard.css);
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
+@font-face {
+    font-family: 'KCC-Hanbit';
+    src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2403-2@1.0/KCC-Hanbit.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
 
 /* body */
 :root {
@@ -11,9 +17,10 @@
 }
 ::selection {background: var(--main-color);color: #000;}
 
-body {background: #f5f5f5;cursor: none;}
-a {cursor: none; -webkit-user-select:none;}
-.cursor {
+body {font-family: 'Pretendard' 'Noto Sans' serif;overflow-x: hidden;}
+a, button {cursor: pointer;}
+
+/* .cursor {
   position: absolute;
   width: 3rem;height: 3rem;
   background: rgba(0,0,0,0.5);
@@ -22,15 +29,14 @@ a {cursor: none; -webkit-user-select:none;}
   transform: translate(-50%, -50%);
   pointer-events: none;
   z-index: 1000;
-}
+} */
 
 /* header */
 header {
-  position: absolute;left: 0;right: 0;
+  position: absolute;top: 0;left: 0;
   display: flex;justify-content: space-between;
-  height: 100px;padding: 25px 80px;
+  width: 100%;padding: 25px 80px;
   color: #fff;text-shadow: #000 1px 0 10px;
-  font-family: "Playfair Display", serif;
   z-index: 1;
 }
 .fixed {
@@ -45,31 +51,43 @@ header ul li {font-size: 25px;font-weight: 700;}
 
 /* main */
 .main_visual {
-  position: relative;
-  display: flex;justify-content: center;
+  position: relative;display: flex;justify-content: center;
   height: 100vh;background: url(../image/main_visual/main.png);
 }
 .main_visual .main_wrap {display: flex;flex-direction: column;justify-content: center;align-items: center;}
 .main_visual .main_h2 {color: #fff;text-shadow: #000 1px 0 10px;}
-.main_visual h2 {text-align: center;font-size: 80px;font-weight: 700;font-family: "Playfair Display", serif;}
+.main_visual h2 {text-align: center;font-size: 80px;font-weight: 700;font-family: "Playfair", serif;}
 
-.about {font-family: "Noto Sans KR", sans-serif;height: 100vh;padding: 300px 80px 0;}
-.about .about_wrap {display: flex;justify-content: center; align-items: center;}
+.about {padding: 0 80px;}
+.about .about_wrap {display: flex;justify-content: center;align-items: center;height: 100vh;
+  /* border: 2px solid red; */
+}
+.about .about_wrap>* {height: 100%;width: 50%;}
 .about .about_wrap .about_left {
   display: flex;flex-direction: column;justify-content: center;align-items: center;
-  position: relative;text-align: center;width: 100%;
+  text-align: center;padding-left: 150px;
+  /* border: 2px solid orange; */
 }
-.about .about_wrap .about_left strong {position: absolute;top: -150px;left: 270px;font-size: 50px;font-weight: 700;font-family: "Playfair Display", serif;}
-.about .about_wrap .about_left img {width: 300px;height: 341px;border: 1px solid #000;border-radius: 50%;}
-.about .p_info {display: flex;flex-direction: column;align-items: flex-start;width: 400px;padding-top: 50px;}
+.about .about_wrap .about_left img {width: 400px;height: 460px;border-radius: 20px; object-fit: cover;}
+.about .p_info {
+  display: flex;flex-direction: column;align-items: flex-start;width: 400px;padding-top: 50px;
+  /* border: 2px solid yellow; */
+}
 
 .about .about_txt {
-  display: flex;flex-direction: column;justify-content: center;
-  width: 100%;gap: 80px;font-size: 20px;
+  display: flex;flex-direction: column;padding-top: 200px;
+  gap: 80px;font-size: 20px;
+  /* border: 2px solid green; */
 }
-.about .about_txt>p {font-weight: bold;}
-.about .p_wrap {display: flex;flex-direction: column;gap: 80px;font-size: 18px;}
-.about .p_license p>span {font-size: 14px;color: gray;}
+.about .about_txt>p {
+  font-weight: bold;
+  /* border: 2px solid blue; */
+}
+.about .p_wrap {display: flex;flex-direction: column;gap: 80px;font-size: 18px;
+  /* border: 2px solid purple; */
+}
+.about .p_wrap span {font-weight: 700;}
+.about .p_wrap p>span {font-size: 14px;color: gray;}
 
 
 .skils {margin: 0 80px;border-top: 1px solid rgba(0,0,0,0.1);}
@@ -83,7 +101,7 @@ header ul li {font-size: 25px;font-weight: 700;}
 }
 #html {background: #f56735; color: #FFF;}
 #css {background: #23aadb;color: #FFF;}
-#jQuery {background: #fff;color: #3065b3;border: 1px solid #000;}
+#jQuery {background: #fff;color: #3065b3;border: 1px solid rgba(0,0,0,0.1);}
 #jQuery .back {color: #3065b3;}
 #js {background: #f4bf3b; color: #fff;}
 #fm {background: #1e1e1e;}
@@ -126,22 +144,24 @@ header ul li {font-size: 25px;font-weight: 700;}
 .port .port_left {
   position: sticky;top: 0;
   display: flex;flex-direction: column;align-items: flex-start;
-  padding: 200px 0 0 200px;width: 40%;
+  padding: 200px 0 0 200px;width: 40%;gap: 20px;
 }
-.port .port_left h2 {font-size: 60px;font-weight: 900;margin-bottom: 20px;}
-.port .port_left p {
-  padding: 10px;font-size: 18px;font-weight: bold;
-  font-family:'Pretendard';
+.port .port_left h2 {font-size: 60px;font-weight: 900;margin-bottom: 50px;}
+.port .port_left button {
+  padding: 10px;
+  border: 2px solid #000;border-radius: 50px;
+  font-size: 18px;font-weight: bold;
 }
 .port .port_right {display: flex;flex-direction: column;width: 60%;}
 .port .port_right ul {display: flex;padding: 30px 30px;flex-wrap: wrap;}
 .port .port_right li {display: flex;flex-direction: column;width: 100%;margin-bottom: 200px;}
 .port .port_right a {overflow: hidden;width: 100%;height: 400px;}
-.port .port_right li img {width: 100%;height: 100%;object-fit: cover;flex-shrink: 0;}
+.port .port_right li img {width: 100%;height: 100%;object-fit: cover;flex-shrink: 0;border-radius: 10px;}
 .port .port_right li .p_txt {display: flex;flex-direction: column;justify-content: center;}
 .port .port_right li .p_txt strong {font-size: 50px;font-weight: 700;}
 .port .port_right li .p_txt p {font-size: 18px;margin-top: 10px;}
 
+.kaist, .posco, .xi {scroll-margin-top: 100px; /* 스크롤 시 상단에 100px 여백 */ }
 
 /* footer */
 footer {margin: 0 80px;border-top: 1px solid rgba(0,0,0,0.1);height: 70vh;}
