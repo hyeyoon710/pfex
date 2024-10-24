@@ -1,17 +1,6 @@
 const box = document.querySelector('.about_left');
 console.log(box.offsetWidth, box.offsetHeight);
 
-//cursor custom
-// let mouseCursor = document.querySelector(".cursor");
-// //window 객체에 scroll & mouse 이벤트를 추가하고 cursor함수 실행되도록 함
-// window.addEventListener("scroll", cursor);
-// window.addEventListener("mousemove", cursor);
-// //커스텀 커서의 left값과 top값을 커서의 XY좌표값과 일치시킴
-// function cursor(e) {
-//   mouseCursor.style.left = e.pageX + "px"
-//   mouseCursor.style.top = e.pageY - scrollY + "px"
-// }
-
 let lastScrollTop = 0; // 이전 스크롤 위치 저장
 
 $(window).on('scroll', function() {
@@ -30,10 +19,8 @@ $(window).on('scroll', function() {
     // 스크롤이 110px 이하일 때는 헤더가 보임
     $('header').removeClass('fixed').slideDown();
   }
-
   lastScrollTop = currentScrollTop; // 이전 스크롤 위치 업데이트
 });
-
 
 // section move
 $('header a').click(function(e) {
@@ -49,19 +36,6 @@ $('header a').click(function(e) {
     scrollTop: $('section').eq(n + 1).offset().top
   }, 500);
 })
-
-document.querySelector('.pb_1').addEventListener('click', function() {
-  document.querySelector('.kaist').scrollIntoView({ behavior: 'smooth', block: 'start'});
-
-  document.querySelector('.pb_1').style.backgroundColor = '#075545';
-  document.querySelector('.pb_1').style.borderColor = '#075545';
-
-});
-document.querySelector('.pb_2').addEventListener('click', function() {
-  document.querySelector('.posco').scrollIntoView({ behavior: 'smooth', block: 'start'});
-
-});
-
 
 // ScrollTrigger
 window.addEventListener('load', () => {
@@ -88,6 +62,30 @@ window.addEventListener('load', () => {
 
   ani1.play();
 })
+
+const kaist = document.querySelector('.kaist')
+const pb1 = document.querySelector('.pb_1')
+const posco = document.querySelector('.posco')
+const pb2 = document.querySelector('.pb_2')
+
+pb1.addEventListener('click', function() {
+  kaist.scrollIntoView({ behavior: 'smooth', block: 'start'});
+  pb1.style.backgroundColor = '#075545'
+
+  const pb1BgColor = getComputedStyle(pb1).backgroundColor;
+
+  if (pb1BgColor === 'rgb(7, 85, 69)') pb2.style.backgroundColor = '#fff'
+});
+
+pb2.addEventListener('click', function() {
+  posco.scrollIntoView({ behavior: 'smooth', block: 'start'});
+  pb2.style.backgroundColor = '#075545'
+
+  const pb2BgColor = getComputedStyle(pb2).backgroundColor;
+
+  if (pb2BgColor === 'rgb(7, 85, 69)') pb1.style.backgroundColor = '#fff'
+
+});
 
 
 
