@@ -1,7 +1,6 @@
 const box = document.querySelector('.about_left');
 console.log(box.offsetWidth, box.offsetHeight);
 
-
 //cursor custom
 // let mouseCursor = document.querySelector(".cursor");
 // //window 객체에 scroll & mouse 이벤트를 추가하고 cursor함수 실행되도록 함
@@ -53,9 +52,14 @@ $('header a').click(function(e) {
 
 document.querySelector('.pb_1').addEventListener('click', function() {
   document.querySelector('.kaist').scrollIntoView({ behavior: 'smooth', block: 'start'});
+
+  document.querySelector('.pb_1').style.backgroundColor = '#075545';
+  document.querySelector('.pb_1').style.borderColor = '#075545';
+
 });
 document.querySelector('.pb_2').addEventListener('click', function() {
   document.querySelector('.posco').scrollIntoView({ behavior: 'smooth', block: 'start'});
+
 });
 
 

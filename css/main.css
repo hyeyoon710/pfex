@@ -12,13 +12,13 @@
 
 /* body */
 :root {
-  --main-color: #E8E3C3;--color-texta: #1d1d1d;
+  --main-color: #075545;--color-texta: #1d1d1d;
   --kaist-color: #005dab;--xi-color: #006b8d;--posco-color: #00588a;
 }
-::selection {background: var(--main-color);color: #000;}
+::selection {background: var(--main-color);color: #fff;}
 
 body {font-family: 'Pretendard' 'Noto Sans' serif;overflow-x: hidden;}
-a, button {cursor: pointer;}
+a, button, img {cursor: pointer;user-select: none;}
 
 /* .cursor {
   position: absolute;
@@ -56,7 +56,7 @@ header ul li {font-size: 25px;font-weight: 700;}
 }
 .main_visual .main_wrap {display: flex;flex-direction: column;justify-content: center;align-items: center;}
 .main_visual .main_h2 {color: #fff;text-shadow: #000 1px 0 10px;}
-.main_visual h2 {text-align: center;font-size: 80px;font-weight: 700;font-family: "Playfair", serif;}
+.main_visual h2 {text-align: center;font-size: 80px;font-weight: 900;font-family: "Playfair", serif;}
 
 .about {padding: 0 80px;}
 .about .about_wrap {display: flex;justify-content: center;align-items: center;height: 100vh;
@@ -159,7 +159,7 @@ header ul li {font-size: 25px;font-weight: 700;}
 .port .port_right li img {width: 100%;height: 100%;object-fit: cover;flex-shrink: 0;border-radius: 10px;}
 .port .port_right li .p_txt {display: flex;flex-direction: column;justify-content: center;}
 .port .port_right li .p_txt strong {font-size: 50px;font-weight: 700;}
-.port .port_right li .p_txt p {font-size: 18px;margin-top: 10px;}
+.port .port_right li .p_txt p {font-size: 18px;margin-top: 10px;font-weight: 700;}
 
 .kaist, .posco, .xi {scroll-margin-top: 100px; /* 스크롤 시 상단에 100px 여백 */ }
 
