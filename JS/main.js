@@ -70,20 +70,34 @@ const pb2 = document.querySelector('.pb_2')
 
 pb1.addEventListener('click', function() {
   kaist.scrollIntoView({ behavior: 'smooth', block: 'start'});
+  pb1.style.color = '#fff'
   pb1.style.backgroundColor = '#075545'
+  pb1.style.borderColor = ' #fff'
 
   const pb1BgColor = getComputedStyle(pb1).backgroundColor;
 
-  if (pb1BgColor === 'rgb(7, 85, 69)') pb2.style.backgroundColor = '#fff'
+  if (pb1BgColor === 'rgb(7, 85, 69)') {
+    pb2.style.color = '#000'
+    pb2.style.backgroundColor = '#FFF'
+    pb2.style.borderColor = '#000'
+  }
+
 });
 
 pb2.addEventListener('click', function() {
   posco.scrollIntoView({ behavior: 'smooth', block: 'start'});
+  pb2.style.color = '#fff'
   pb2.style.backgroundColor = '#075545'
+  pb2.style.borderColor = ' #fff'
 
   const pb2BgColor = getComputedStyle(pb2).backgroundColor;
 
-  if (pb2BgColor === 'rgb(7, 85, 69)') pb1.style.backgroundColor = '#fff'
+  if (pb2BgColor === 'rgb(7, 85, 69)') {
+  pb1.style.color = '#000'
+  pb1.style.backgroundColor = '#FFF'
+  pb1.style.borderColor = '#000'
+  }
+
 
 });
 
