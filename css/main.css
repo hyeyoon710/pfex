@@ -17,7 +17,7 @@
 }
 ::selection {background: var(--main-color);color: #fff;}
 
-body {font-family: 'Pretendard' 'Noto Sans' serif;overflow-x: hidden;}
+body {font-family: 'Pretendard' , 'Noto Sans' , serif;overflow-x: hidden;}
 a, button, img {cursor: pointer;user-select: none;}
 
 /* .cursor {
@@ -63,24 +63,24 @@ header ul li {font-size: 25px;font-weight: 700;}
 .about .about_wrap>* {height: 100%;width: 50%;}
 .about .about_wrap .about_left {
   display: flex;flex-direction: column;justify-content: center;align-items: center;
-  text-align: center;padding-left: 150px;
+  text-align: center;
 }
 .about .about_wrap .about_left img {width: 400px;height: 460px;border-radius: 20px; object-fit: cover;}
-.about .p_info {
-  display: flex;flex-direction: column;align-items: flex-start;
-  width: 400px;padding-top: 50px;
-  font-size: 20px;
+.about .about_right {
+  display: flex;flex-direction: column;justify-content: space-around;
+  gap: 80px;height: 460px;font-size: 22px;
 }
-.about .about_txt {
-  display: flex;flex-direction: column;padding-top: 200px;
-  gap: 80px;font-size: 22px;
-}
-.about .about_txt>p {font-weight: bold;}
-.about .p_wrap {display: flex;flex-direction: column;gap: 80px;}
-.about .p_wrap  p {font-size: 18px;}
-.about .p_wrap .p_license>span {font-weight: 700;font-size: 20px;}
-.about .p_wrap .p_license p>span {font-size: 14px;color: gray;}
-.about .p_wrap .p_career>span {font-weight: 700;font-size: 20px;}
+.about .about_right>p {font-weight: bold;font-size: 23px;}
+.about_right p>span {color: var(--main-color);}
+.about .about_right .about_bottom {display: flex;justify-content: flex-start;gap: 80px;font-size: 20px;}
+.about .p_info {display: flex;flex-direction: column;align-items: flex-start;gap: 10px;}
+.about .p_info .name {font-weight: 700;font-size: 22px;margin-bottom: 15px;}
+.about .p_wrap {display: flex;flex-direction: column;gap: 30px;}
+.about .p_license {display: flex;flex-direction: column;gap: 15px;}
+.about .p_license>span {font-weight: 700;margin-bottom: 10px;}
+.about .p_license p>span {font-size: 14px;color: gray;}
+.about .p_career {display: flex;flex-direction: column;gap: 15px;margin-top: 30px;}
+.about .p_career>span {font-weight: 700;margin-bottom: 10px;}
 
 .skils {margin: 0 80px;border-top: 1px solid rgba(0,0,0,0.1);}
 .skils .skils_wrap {display: flex;justify-content: center;align-items: center;font-size: 26px;font-weight: 700;height: 100vh;gap: 10px;perspective: 1000px;}
@@ -148,12 +148,14 @@ header ul li {font-size: 25px;font-weight: 700;}
 .port .port_right li {display: flex;flex-direction: column;width: 100%;margin-bottom: 200px;}
 .port .port_right a {overflow: hidden;width: 100%;height: 400px;}
 .port .port_right li img {width: 100%;height: 100%;object-fit: cover;flex-shrink: 0;border-radius: 10px;}
+.port .port_right .p_wrap {display: flex;justify-content: space-between;align-items: center;margin-top: 20px;font-size: 18px;}
+.port .port_right .p_wrap a {padding: 10px;border: 2px solid #000;border-radius: 20px;}
 .port .port_right li .p_txt {display: flex;flex-direction: column;justify-content: center;}
 .port .port_right li .p_txt strong {font-size: 50px;font-weight: 700;}
+.port .port_right li .p_txt strong>span {color: gray; font-size: 17px;font-weight: normal;margin-left: 20px;}
 .port .port_right li .p_txt p {font-size: 18px;margin-top: 10px;font-weight: 700;}
-.port .port_right li .p_txt span {padding-top: 10px;font-size: 17px;}
 
-.kaist, .posco, .xi {scroll-margin-top: 100px; /* 스크롤 시 상단에 100px 여백 */}
+.kaist, .posco, .javascript {scroll-margin-top: 100px; /* 스크롤 시 상단에 100px 여백 */}
 
 /* footer */
 footer {margin: 0 80px;border-top: 1px solid rgba(0,0,0,0.1);height: 70vh;}

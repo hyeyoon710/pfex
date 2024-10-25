@@ -1,4 +1,4 @@
-const box = document.querySelector('.about_left');
+const box = document.querySelector('.p_wrap');
 console.log(box.offsetWidth, box.offsetHeight);
 
 let lastScrollTop = 0; // 이전 스크롤 위치 저장
@@ -67,6 +67,8 @@ const kaist = document.querySelector('.kaist')
 const pb1 = document.querySelector('.pb_1')
 const posco = document.querySelector('.posco')
 const pb2 = document.querySelector('.pb_2')
+const JavaScript = document.querySelector('.javascript')
+const pb3 = document.querySelector('.pb_3')
 
 pb1.addEventListener('click', function() {
   kaist.scrollIntoView({ behavior: 'smooth', block: 'start'});
@@ -80,6 +82,9 @@ pb1.addEventListener('click', function() {
     pb2.style.color = '#000'
     pb2.style.backgroundColor = '#FFF'
     pb2.style.borderColor = '#000'
+    pb3.style.color = '#000'
+    pb3.style.backgroundColor = '#FFF'
+    pb3.style.borderColor = '#000'
   }
 
 });
@@ -96,8 +101,29 @@ pb2.addEventListener('click', function() {
   pb1.style.color = '#000'
   pb1.style.backgroundColor = '#FFF'
   pb1.style.borderColor = '#000'
+  pb3.style.color = '#000'
+  pb3.style.backgroundColor = '#FFF'
+  pb3.style.borderColor = '#000'
   }
 
+});
+
+pb3.addEventListener('click', function() {
+  JavaScript.scrollIntoView({ behavior: 'smooth', block: 'start'});
+  pb3.style.color = '#fff'
+  pb3.style.backgroundColor = '#075545'
+  pb3.style.borderColor = ' #fff'
+
+  const pb3BgColor = getComputedStyle(pb3).backgroundColor;
+
+  if (pb3BgColor === 'rgb(7, 85, 69)') {
+  pb1.style.color = '#000'
+  pb1.style.backgroundColor = '#FFF'
+  pb1.style.borderColor = '#000'
+  pb2.style.color = '#000'
+  pb2.style.backgroundColor = '#FFF'
+  pb2.style.borderColor = '#000'
+  }
 
 });
 
