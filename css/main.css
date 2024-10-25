@@ -78,9 +78,9 @@ header ul li {font-size: 25px;font-weight: 700;}
 .about .about_txt>p {font-weight: bold;}
 .about .p_wrap {display: flex;flex-direction: column;gap: 80px;}
 .about .p_wrap  p {font-size: 18px;}
-.about .p_wrap .p_license>span {color:var(--main-color);font-weight: 700;font-size: 20px;}
+.about .p_wrap .p_license>span {font-weight: 700;font-size: 20px;}
 .about .p_wrap .p_license p>span {font-size: 14px;color: gray;}
-.about .p_wrap .p_career>span {color:var(--main-color);font-weight: 700;font-size: 20px;}
+.about .p_wrap .p_career>span {font-weight: 700;font-size: 20px;}
 
 .skils {margin: 0 80px;border-top: 1px solid rgba(0,0,0,0.1);}
 .skils .skils_wrap {display: flex;justify-content: center;align-items: center;font-size: 26px;font-weight: 700;height: 100vh;gap: 10px;perspective: 1000px;}
@@ -126,6 +126,7 @@ header ul li {font-size: 25px;font-weight: 700;}
   transform: rotateY(180deg);backface-visibility: hidden;
 }
 
+.rest {overflow: hidden;}
 .rest .front {background: url(../image/rest/mask1.png) center no-repeat;}
 .rest img {width: 100%;height: 100vh;}
 
@@ -150,6 +151,7 @@ header ul li {font-size: 25px;font-weight: 700;}
 .port .port_right li .p_txt {display: flex;flex-direction: column;justify-content: center;}
 .port .port_right li .p_txt strong {font-size: 50px;font-weight: 700;}
 .port .port_right li .p_txt p {font-size: 18px;margin-top: 10px;font-weight: 700;}
+.port .port_right li .p_txt span {padding-top: 10px;font-size: 17px;}
 
 .kaist, .posco, .xi {scroll-margin-top: 100px; /* 스크롤 시 상단에 100px 여백 */}
 

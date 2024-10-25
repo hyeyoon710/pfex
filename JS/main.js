@@ -47,8 +47,8 @@ window.addEventListener('load', () => {
       .from ('.main_h2 .t2', {xPercent : 400, autoAlpha : 0})
 
   gsap.to('.rest .front', {
-    scale: 2,
-    autoAlpha : 0,
+    scale: 60,
+    // duration: 2,
     transformOrigin: 'center center', // 중심점 기준으로 확대
     scrollTrigger: {
       trigger: '.rest',
