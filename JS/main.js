@@ -47,8 +47,8 @@ window.addEventListener('load', () => {
       .from ('.main_h2 .t2', {xPercent : 400, autoAlpha : 0})
 
   gsap.to('.rest .front', {
-    scale: 60,
-    // duration: 2,
+    scale: 45,
+    // duration: 5,
     transformOrigin: 'center center', // 중심점 기준으로 확대
     scrollTrigger: {
       trigger: '.rest',
@@ -60,74 +60,103 @@ window.addEventListener('load', () => {
     }
   });
 
+
   ani1.play();
 })
 
-const kaist = document.querySelector('.kaist')
-const pb1 = document.querySelector('.pb_1')
-const posco = document.querySelector('.posco')
-const pb2 = document.querySelector('.pb_2')
-const JavaScript = document.querySelector('.javascript')
-const pb3 = document.querySelector('.pb_3')
+// const kaist = document.querySelector('.kaist')
+// const pb1 = document.querySelector('.pb_1')
+// const posco = document.querySelector('.posco')
+// const pb2 = document.querySelector('.pb_2')
+// const JavaScript = document.querySelector('.javascript')
+// const pb3 = document.querySelector('.pb_3')
 
-pb1.addEventListener('click', function() {
-  kaist.scrollIntoView({ behavior: 'smooth', block: 'start'});
-  pb1.style.color = '#fff'
-  pb1.style.backgroundColor = '#075545'
-  pb1.style.borderColor = ' #fff'
+// pb1.addEventListener('click', function() {
+//   kaist.scrollIntoView({ behavior: 'smooth', block: 'start'});
+//   pb1.style.color = '#fff'
+//   pb1.style.backgroundColor = '#075545'
+//   pb1.style.borderColor = ' #fff'
 
-  const pb1BgColor = getComputedStyle(pb1).backgroundColor;
+//   const pb1BgColor = getComputedStyle(pb1).backgroundColor;
 
-  if (pb1BgColor === 'rgb(7, 85, 69)') {
-    pb2.style.color = '#000'
-    pb2.style.backgroundColor = '#FFF'
-    pb2.style.borderColor = '#000'
-    pb3.style.color = '#000'
-    pb3.style.backgroundColor = '#FFF'
-    pb3.style.borderColor = '#000'
-  }
+//   if (pb1BgColor === 'rgb(7, 85, 69)') {
+//     pb2.style.color = '#000'
+//     pb2.style.backgroundColor = '#FFF'
+//     pb2.style.borderColor = '#000'
+//     pb3.style.color = '#000'
+//     pb3.style.backgroundColor = '#FFF'
+//     pb3.style.borderColor = '#000'
+//   }
+// });
 
-});
+// pb2.addEventListener('click', function() {
+//   posco.scrollIntoView({ behavior: 'smooth', block: 'start'});
+//   pb2.style.color = '#fff'
+//   pb2.style.backgroundColor = '#075545'
+//   pb2.style.borderColor = ' #fff'
 
-pb2.addEventListener('click', function() {
-  posco.scrollIntoView({ behavior: 'smooth', block: 'start'});
-  pb2.style.color = '#fff'
-  pb2.style.backgroundColor = '#075545'
-  pb2.style.borderColor = ' #fff'
+//   const pb2BgColor = getComputedStyle(pb2).backgroundColor;
 
-  const pb2BgColor = getComputedStyle(pb2).backgroundColor;
+//   if (pb2BgColor === 'rgb(7, 85, 69)') {
+//   pb1.style.color = '#000'
+//   pb1.style.backgroundColor = '#FFF'
+//   pb1.style.borderColor = '#000'
+//   pb3.style.color = '#000'
+//   pb3.style.backgroundColor = '#FFF'
+//   pb3.style.borderColor = '#000'
+//   }
+// });
 
-  if (pb2BgColor === 'rgb(7, 85, 69)') {
-  pb1.style.color = '#000'
-  pb1.style.backgroundColor = '#FFF'
-  pb1.style.borderColor = '#000'
-  pb3.style.color = '#000'
-  pb3.style.backgroundColor = '#FFF'
-  pb3.style.borderColor = '#000'
-  }
+// pb3.addEventListener('click', function() {
+//   JavaScript.scrollIntoView({ behavior: 'smooth', block: 'start'});
+//   pb3.style.color = '#fff'
+//   pb3.style.backgroundColor = '#075545'
+//   pb3.style.borderColor = ' #fff'
 
-});
+//   const pb3BgColor = getComputedStyle(pb3).backgroundColor;
 
-pb3.addEventListener('click', function() {
-  JavaScript.scrollIntoView({ behavior: 'smooth', block: 'start'});
-  pb3.style.color = '#fff'
-  pb3.style.backgroundColor = '#075545'
-  pb3.style.borderColor = ' #fff'
+//   if (pb3BgColor === 'rgb(7, 85, 69)') {
+//   pb1.style.color = '#000'
+//   pb1.style.backgroundColor = '#FFF'
+//   pb1.style.borderColor = '#000'
+//   pb2.style.color = '#000'
+//   pb2.style.backgroundColor = '#FFF'
+//   pb2.style.borderColor = '#000'
+//   }
+// });
 
-  const pb3BgColor = getComputedStyle(pb3).backgroundColor;
+const kaist = document.querySelector('.kaist');
+const pb1 = document.querySelector('.pb_1');
+const posco = document.querySelector('.posco');
+const pb2 = document.querySelector('.pb_2');
+const JavaScript = document.querySelector('.javascript');
+const pb3 = document.querySelector('.pb_3');
+const buttons = [pb1, pb2, pb3]; // 버튼들을 배열로 관리
 
-  if (pb3BgColor === 'rgb(7, 85, 69)') {
-  pb1.style.color = '#000'
-  pb1.style.backgroundColor = '#FFF'
-  pb1.style.borderColor = '#000'
-  pb2.style.color = '#000'
-  pb2.style.backgroundColor = '#FFF'
-  pb2.style.borderColor = '#000'
-  }
+// 버튼 스타일 초기화 함수
+function resetButtonStyles() {
+  buttons.forEach(button => {
+    button.style.color = '#000';
+    button.style.backgroundColor = '#FFF';
+    button.style.borderColor = '#000';
+  });
+}
 
-});
+// 버튼 클릭 이벤트 핸들러 생성 함수
+function addButtonClickListener(button, targetElement) {
+  button.addEventListener('click', function () {
+    targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    resetButtonStyles(); // 다른 버튼 스타일 초기화
+    button.style.color = '#fff';
+    button.style.backgroundColor = '#075545';
+    button.style.borderColor = '#fff';
+  });
+}
 
-
+// 각 버튼에 클릭 이벤트 핸들러 추가
+addButtonClickListener(pb1, kaist);
+addButtonClickListener(pb2, posco);
+addButtonClickListener(pb3, JavaScript);
 
 
 
