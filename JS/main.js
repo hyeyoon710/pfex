@@ -59,22 +59,6 @@ window.addEventListener('load', () => {
       // markers: true,
     }
   });
-
-  // ScrollTrigger.matchMedia({
-
-  //   "(max-width: 500px)": function() {
-  //     gsap.to('.port_left', {
-  //       scrollTrigger: {
-  //         trigger: '.port_left',
-  //         start: 'top 110px',
-  //         end : ``,
-  //         pin: true,
-  //         scrub: true,
-  //       }
-  //     });
-  //   },
-  // });
-
   ani1.play();
 })
 
@@ -84,6 +68,7 @@ const posco = document.querySelector('.posco');
 const pb2 = document.querySelector('.pb_2');
 const JavaScript = document.querySelector('.javascript');
 const pb3 = document.querySelector('.pb_3');
+const header = document.querySelector('.pb_3');
 const buttons = [pb1, pb2, pb3]; // 버튼들을 배열로 관리
 
 // 버튼 스타일 초기화 함수
@@ -103,6 +88,7 @@ function addButtonClickListener(button, targetElement) {
     button.style.color = '#fff';
     button.style.backgroundColor = '#075545';
     button.style.borderColor = '#fff';
+
   });
 }
 

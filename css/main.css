@@ -85,7 +85,7 @@ header ul li {font-size: 25px}
 
 @media screen and (max-width: 500px) {
   .about {padding: 0;}
-  .about .about_wrap {flex-direction: column;}
+  .about .about_wrap {flex-direction: column;margin-top: 100px;}
   .about .about_right>p {font-size: 16px;}
   .about .about_right .about_bottom {flex-direction: column;}
   .about .p_info {font-size: 16px;}
@@ -174,7 +174,7 @@ header ul li {font-size: 25px}
 @media screen and (max-width: 500px) {
   .port{margin: 0;}
   .port .port_wrap {margin: 20px;}
-  .port .port_left {position: sticky;left: 0;flex-direction: row;text-align: center;padding: 0;width: 0;}
+  .port .port_left {position: sticky;top: 20px;left: 0;flex-direction: row;text-align: center;padding: 0;width: 0;}
   .port .port_left h2 {font-size: 30px;margin-bottom: 0;align-self: center;}
   .port .port_left .btn_wrap {display: flex;flex-direction: row;gap: 10px;}
   .port .port_left button {padding: 0 10px;font-size: 16px;}
@@ -182,6 +182,7 @@ header ul li {font-size: 25px}
   .port .port_right {width: 100%;margin-top: 100px;}
   .port .port_right .p_wrap {flex-direction: column;align-items: flex-start;}
   .port .port_right li .p_txt {}
+  .port .port_right li .p_txt strong  {font-size: 40px;}
   .port .port_right .p_wrap .a_wrap {margin-top: 30px;}
 }
 
