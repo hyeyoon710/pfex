@@ -142,7 +142,7 @@ header ul li {font-size: 25px}
 }
 .rest {overflow: hidden;}
 .rest .front {background: url(../image/rest/mask.svg) center no-repeat;}
-.rest img {width: 100%;height: 100vh;}
+.rest img {width: 100%;height: 100vh;object-fit: cover;}
 
 .port {margin: 0 80px;font-family: 'yg-jalnan';}
 .port .port_wrap {display: flex;align-items: flex-start;margin: 200px 0;}
