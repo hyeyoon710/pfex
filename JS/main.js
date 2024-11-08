@@ -60,70 +60,23 @@ window.addEventListener('load', () => {
     }
   });
 
+  // ScrollTrigger.matchMedia({
+
+  //   "(max-width: 500px)": function() {
+  //     gsap.to('.port_left', {
+  //       scrollTrigger: {
+  //         trigger: '.port_left',
+  //         start: 'top 110px',
+  //         end : ``,
+  //         pin: true,
+  //         scrub: true,
+  //       }
+  //     });
+  //   },
+  // });
 
   ani1.play();
 })
-
-// const kaist = document.querySelector('.kaist')
-// const pb1 = document.querySelector('.pb_1')
-// const posco = document.querySelector('.posco')
-// const pb2 = document.querySelector('.pb_2')
-// const JavaScript = document.querySelector('.javascript')
-// const pb3 = document.querySelector('.pb_3')
-
-// pb1.addEventListener('click', function() {
-//   kaist.scrollIntoView({ behavior: 'smooth', block: 'start'});
-//   pb1.style.color = '#fff'
-//   pb1.style.backgroundColor = '#075545'
-//   pb1.style.borderColor = ' #fff'
-
-//   const pb1BgColor = getComputedStyle(pb1).backgroundColor;
-
-//   if (pb1BgColor === 'rgb(7, 85, 69)') {
-//     pb2.style.color = '#000'
-//     pb2.style.backgroundColor = '#FFF'
-//     pb2.style.borderColor = '#000'
-//     pb3.style.color = '#000'
-//     pb3.style.backgroundColor = '#FFF'
-//     pb3.style.borderColor = '#000'
-//   }
-// });
-
-// pb2.addEventListener('click', function() {
-//   posco.scrollIntoView({ behavior: 'smooth', block: 'start'});
-//   pb2.style.color = '#fff'
-//   pb2.style.backgroundColor = '#075545'
-//   pb2.style.borderColor = ' #fff'
-
-//   const pb2BgColor = getComputedStyle(pb2).backgroundColor;
-
-//   if (pb2BgColor === 'rgb(7, 85, 69)') {
-//   pb1.style.color = '#000'
-//   pb1.style.backgroundColor = '#FFF'
-//   pb1.style.borderColor = '#000'
-//   pb3.style.color = '#000'
-//   pb3.style.backgroundColor = '#FFF'
-//   pb3.style.borderColor = '#000'
-//   }
-// });
-
-// pb3.addEventListener('click', function() {
-//   JavaScript.scrollIntoView({ behavior: 'smooth', block: 'start'});
-//   pb3.style.color = '#fff'
-//   pb3.style.backgroundColor = '#075545'
-//   pb3.style.borderColor = ' #fff'
-
-//   const pb3BgColor = getComputedStyle(pb3).backgroundColor;
-
-//   if (pb3BgColor === 'rgb(7, 85, 69)') {
-//   pb1.style.color = '#000'
-//   pb1.style.backgroundColor = '#FFF'
-//   pb1.style.borderColor = '#000'
-//   pb2.style.color = '#000'
-//   pb2.style.backgroundColor = '#FFF'
-//   pb2.style.borderColor = '#000'
-//   }
-// });
 
 const kaist = document.querySelector('.kaist');
 const pb1 = document.querySelector('.pb_1');
@@ -157,6 +110,8 @@ function addButtonClickListener(button, targetElement) {
 addButtonClickListener(pb1, kaist);
 addButtonClickListener(pb2, posco);
 addButtonClickListener(pb3, JavaScript);
+
+
 
 
 

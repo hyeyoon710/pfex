@@ -22,8 +22,8 @@
   --kaist-color: #005dab;--xi-color: #006b8d;--posco-color: #00588a;
 }
 ::selection {background: var(--main-color);color: #fff;}
-
-body {font-family: 'Pretendard' , 'Noto Sans' , serif;overflow-x: hidden;}
+html {overflow-x: hidden;}
+body {font-family: 'Pretendard' , 'Noto Sans' , serif;}
 a, button, img {cursor: pointer;user-select: none;}
 
 /* header */
@@ -169,7 +169,21 @@ header ul li {font-size: 25px}
 .port .port_right li .p_txt p {font-size: 20px;margin-top: 10px;}
 .port .port_right .p_wrap .a_wrap a {padding: 10px;border: 2px solid #000;border-radius: 20px;}
 
-.kaist, .posco, .javascript {scroll-margin-top: 100px; /* 스크롤 시 상단에 100px 여백 */}
+.kaist, .posco, .javascript {scroll-margin-top: 100px;} /* 스크롤 시 상단에 100px 여백 */
+
+@media screen and (max-width: 500px) {
+  .port{margin: 0;}
+  .port .port_wrap {margin: 20px;}
+  .port .port_left {position: sticky;left: 0;flex-direction: row;text-align: center;padding: 0;width: 0;}
+  .port .port_left h2 {font-size: 30px;margin-bottom: 0;align-self: center;}
+  .port .port_left .btn_wrap {display: flex;flex-direction: row;gap: 10px;}
+  .port .port_left button {padding: 0 10px;font-size: 16px;}
+
+  .port .port_right {width: 100%;margin-top: 100px;}
+  .port .port_right .p_wrap {flex-direction: column;align-items: flex-start;}
+  .port .port_right li .p_txt {}
+  .port .port_right .p_wrap .a_wrap {margin-top: 30px;}
+}
 
 /* footer */
 footer {margin: 0 80px;border-top: 1px solid rgba(0,0,0,0.1);height: 70vh;}
@@ -178,4 +192,10 @@ footer {margin: 0 80px;border-top: 1px solid rgba(0,0,0,0.1);height: 70vh;}
 .f_wrap .f_adress {
   display: flex;justify-content: center;gap: 500px;
   font-size: 25px;width: 100%;font-weight: 600;
+}
+
+@media screen and (max-width: 500px) {
+  footer {margin: 0;}
+  .f_wrap strong {font-size: 50px;}
+  .f_wrap .f_adress {flex-direction: column;gap: 0;width: auto;gap: 20px;font-size: 20px;}
 }
