@@ -161,7 +161,7 @@ header ul li {font-size: 25px}
 .port .port_left {
   position: sticky;top: 0;
   display: flex;flex-direction: column;align-items: flex-start;
-  padding: 200px 0 0 200px;width: 40%;gap: 20px;
+  padding: 200px 0 0 100px;width: 40%;gap: 20px;
 }
 .port .port_left h2 {font-size: 60px;font-weight: 900;margin-bottom: 50px;}
 .port .port_left button {
