@@ -147,6 +147,14 @@ header ul li {font-size: 25px}
 .rest {overflow: hidden;}
 .rest .front {background: url(../image/rest/mask.svg) center no-repeat;}
 .rest img {width: 100%;height: 100vh;object-fit: cover;}
+.rest p {
+  opacity: 0;
+  position: absolute;left: 50%;bottom: 50%;
+  transform: translateX(-50%);
+  color: #fff;font-size: 80px;font-weight: 700;
+  font-family: "Playfair", serif;text-wrap: nowrap;
+  text-shadow: #000 1px 0 10px;z-index: 10;
+}
 
 .port {margin: 0 80px;font-family: 'yg-jalnan';}
 .port .port_wrap {display: flex;align-items: flex-start;margin: 200px 0;}
@@ -161,6 +169,7 @@ header ul li {font-size: 25px}
   border: 2px solid #000;border-radius: 50px;
   font-size: 18px;font-weight: bold;
 }
+.port .port_left .btn_wrap .pb_1 {background: #075545;border: 2px solid #fff; color: #fff;}
 .port .port_right {display: flex;flex-direction: column;width: 60%;}
 .port .port_right ul {display: flex;padding: 30px 30px;flex-wrap: wrap;}
 .port .port_right li {display: flex;flex-direction: column;width: 100%;margin-bottom: 200px;}
