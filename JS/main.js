@@ -74,7 +74,6 @@ window.addEventListener('load', () => {
   ani1.play();
 })
 
-const buttons = [pb1, pb2, pb3];
 const kaist = document.querySelector('.kaist');
 const pb1 = document.querySelector('.pb_1');
 const posco = document.querySelector('.posco');
@@ -82,6 +81,7 @@ const pb2 = document.querySelector('.pb_2');
 const JavaScript = document.querySelector('.javascript');
 const pb3 = document.querySelector('.pb_3');
 const header = document.querySelector('.pb_3');
+const buttons = [pb1, pb2, pb3];
 
 // 버튼 스타일 초기화 함수
 function resetButtonStyles() {
