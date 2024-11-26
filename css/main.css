@@ -113,13 +113,13 @@ header ul li {font-size: 25px}
 #jQuery {background: #fff;color: #3065b3;border: 1px solid rgba(0,0,0,0.1);}
 #jQuery .back {color: #3065b3;}
 #js {background: #f4bf3b; color: #fff;}
+#react {background: #62d6fb;color: #FFF;}
 #fm {background: #1e1e1e;}
 #fm .c1 {color: #f24e1e;}
 #fm .c2 {color: #ff7262;}
 #fm .c3 {color: #a259ff;}
 #fm .c4 {color: #1abcfe;}
 #fm .c5 {color: #0acf83;}
-#ai {background: #ff9b00;}
 #psd {background: #001e36;color: #31a8ff;}
 
 .skils .skils_wrap li:hover {transform: rotateY(180deg);}
