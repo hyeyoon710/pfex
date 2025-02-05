@@ -182,7 +182,7 @@ header ul li {font-size: 25px}
 .port .port_right li .p_txt p {font-size: 20px;margin-top: 10px;}
 .port .port_right .p_wrap .a_wrap a {padding: 10px;border: 2px solid #000;border-radius: 20px;}
 
-.kaist, .posco, .javascript {scroll-margin-top: 100px;} /* 스크롤 시 상단에 100px 여백 */
+.kaist, .posco {scroll-margin-top: 100px;} /* 스크롤 시 상단에 100px 여백 */
 
 @media screen and (max-width: 500px) {
   .port{margin: 0;}
