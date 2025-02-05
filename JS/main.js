@@ -79,6 +79,8 @@ const pb1 = document.querySelector('.pb_1');
 const posco = document.querySelector('.posco');
 const pb2 = document.querySelector('.pb_2');
 const header = document.querySelector('.pb_3');
+const javascript = document.querySelector('.javascript');
+const pb3 = document.querySelector('.pb_3');
 const buttons = [pb1, pb2, pb3];
 
 // 버튼 스타일 초기화 함수
@@ -105,6 +107,7 @@ function addButtonClickListener(button, targetElement) {
 // 각 버튼에 클릭 이벤트 핸들러 추가
 addButtonClickListener(pb1, kaist);
 addButtonClickListener(pb2, posco);
+addButtonClickListener(pb3, javascript);
 
 
 
